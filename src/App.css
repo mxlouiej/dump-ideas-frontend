@@ -1,38 +1,87 @@
-.App {
+.main-container {
   text-align: center;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.big-text {
+  font-size: 8rem;
+  font-weight: bolder;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.btn-large-bold {
+  font-weight: bolder !important;
+  border-radius: 0 !important;
+}
+
+.dump-header {
+  top: 2rem;
+}
+
+.form-control {
+  font-size: 3rem !important;
+  text-align: center;
+  text-transform: uppercase !important;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.highlight-word {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.statement-text {
+  padding-bottom: 2rem;
+}
+
+.sub-text {
+  font-size: 0.7rem;
+  text-decoration: none;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+  border: 1px solid;
+}
+
+.locked-text {
+  color: rgb(233, 233, 233);
+  background-color: grey;
+}
+
+.unlocked-text {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.toast-alert {
+  bottom: 15px;
+  left: 15px;
+}
+
+/* On screens that are 992px or less */
+@media screen and (max-width: 992px) {
+  .big-text {
+    font-size: 5rem;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* On screens that are 600px or less */
+@media screen and (max-width: 600px) {
+  .big-text {
+    font-size: 2rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .toast-alert {
+    bottom: 15px;
+    left: 0;
+  }
+
+  .form-control {
+    font-size: 2rem !important;
   }
 }
