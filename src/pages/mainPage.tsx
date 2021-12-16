@@ -12,7 +12,7 @@ const MainPage = () => {
   let navigate = useNavigate();
 
   const fetchPossibilities = async () => {
-    await fetch("http://localhost:8000/getPossibilities")
+    await fetch("https://dump-ideas-backend.herokuapp.com/getPossibilities")
       .then((res) => res.json().then((r) => setData(r.count)))
       .catch((r) => {
         console.log("Error", r);

@@ -22,21 +22,21 @@ const ShitIdeas = () => {
   const [article, setArticle] = useState("A");
 
   const fetchRandomVerb = async () => {
-    await fetch("http://localhost:8000/getRandomVerb")
+    await fetch("https://dump-ideas-backend.herokuapp.com/getRandomVerb")
       .then((res) => res.json().then((r) => setVerb({ ...verb, word: r.verb })))
       .catch((r) => {
         console.log("Error", r);
       });
   };
   const fetchRandomNoun = async () => {
-    await fetch("http://localhost:8000/getRandomNoun")
+    await fetch("https://dump-ideas-backend.herokuapp.com/getRandomNoun")
       .then((res) => res.json().then((r) => setNoun({ ...noun, word: r.noun })))
       .catch((r) => {
         console.log("Error", r);
       });
   };
   const fetchRandomProduct = async () => {
-    await fetch("http://localhost:8000/getProduct")
+    await fetch("https://dump-ideas-backend.herokuapp.com/getProduct")
       .then((res) =>
         res.json().then((r) => {
           if (

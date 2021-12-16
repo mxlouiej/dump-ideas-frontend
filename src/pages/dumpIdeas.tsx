@@ -18,7 +18,7 @@ const DumpIdeas = () => {
   const [message, setMessage] = useState("");
 
   const submitWords = async (word: string, wordType: string) => {
-    await fetch("http://localhost:8000/addWord", {
+    await fetch("https://dump-ideas-backend.herokuapp.com/addWord", {
       method: "POST",
       body: JSON.stringify({
         word: word.toLowerCase(),
