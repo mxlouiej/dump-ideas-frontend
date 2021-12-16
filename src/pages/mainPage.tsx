@@ -27,17 +27,17 @@ const MainPage = () => {
     <Container className="main-container d-flex flex-column justify-content-center">
       <Header />
 
-      <Row className="my-5">
-        <h1 className="big-text">
+      <Row className="my-md-5">
+        <h1 className="big-generate-text">
           I CAN GENERATE <br />
-          {data}
-          <br /> IDEAS
+          {data.toLocaleString("en-US")}
+          <br /> IDEAS.
         </h1>
       </Row>
       <Row className="flex-column flex-md-row">
-        <Col className="mb-3">
+        <Col className="pt-4 d-flex d-md-block flex-column justify-content-center">
           <Button
-            className="btn-large-bold"
+            className="btn-large-bold px-lg-5"
             variant="outline-dark"
             size="lg"
             onClick={() => {
@@ -46,11 +46,11 @@ const MainPage = () => {
           >
             DUMP IDEAS
           </Button>
-          <h6>HELP A COLLEAGUE</h6>
+          <h6 className="mt-2">HELP A COLLEAGUE</h6>
         </Col>
-        <Col className="mb-3">
+        <Col className="pt-4 d-flex d-md-block flex-column justify-content-center">
           <Button
-            className="btn-large-bold"
+            className="btn-large-bold px-md-5"
             variant="outline-dark"
             size="lg"
             onClick={() => {
@@ -59,7 +59,7 @@ const MainPage = () => {
           >
             SHIT IDEAS
           </Button>
-          <h6>HELP YOURSELF</h6>
+          <h6 className="mt-2">HELP YOURSELF</h6>
         </Col>
       </Row>
     </Container>

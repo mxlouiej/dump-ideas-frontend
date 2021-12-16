@@ -14,7 +14,7 @@ import Header from "../components/header";
 const DumpIdeas = () => {
   const [word, setWord] = useState("");
   const [wordType, setWordType] = useState("Verb");
-  const [openModal, setOpenModal] = useState(false);
+  const [showToast, setShowToast] = useState(false);
   const [message, setMessage] = useState("");
 
   const submitWords = async (word: string, wordType: string) => {
@@ -27,7 +27,7 @@ const DumpIdeas = () => {
     })
       .then((res) => {
         res.json().then((r) => {
-          setOpenModal(true);
+          setShowToast(true);
           setMessage(r.message);
           console.log(r);
         });
@@ -71,7 +71,7 @@ const DumpIdeas = () => {
       <Row>
         <Col>
           <Button
-            variant="outline-dark btn-large-bold"
+            variant="outline-dark btn-large-bold px-md-5"
             size="lg"
             onClick={() => submitWords(word, wordType)}
             disabled={word ? false : true}
@@ -80,8 +80,8 @@ const DumpIdeas = () => {
           </Button>
         </Col>
       </Row>
-      {openModal && (
-        <Toast show={openModal} className="position-absolute toast-alert">
+      {showToast && (
+        <Toast show={showToast} className="position-absolute toast-alert">
           <Toast.Header>
             <strong className="me-auto">Alert</strong>
           </Toast.Header>

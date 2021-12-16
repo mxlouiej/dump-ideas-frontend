@@ -4,13 +4,22 @@
 }
 
 .big-text {
+  font-size: 7rem;
+  font-weight: 700;
+  color: rgb(55, 55, 55);
+}
+
+.big-generate-text {
   font-size: 8rem;
-  font-weight: bolder;
+  font-weight: 750;
+  color: rgb(55, 55, 55);
+  line-height: 1;
 }
 
 .btn-large-bold {
-  font-weight: bolder !important;
+  font-weight: 700 !important;
   border-radius: 0 !important;
+  font-size: 2.5rem !important;
 }
 
 .dump-header {
@@ -21,6 +30,7 @@
   font-size: 3rem !important;
   text-align: center;
   text-transform: uppercase !important;
+  font-weight: 600 !important;
 }
 
 .bold-text {
@@ -39,7 +49,7 @@
 .sub-text {
   font-size: 0.7rem;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 500;
   position: absolute;
   left: 0;
   right: 0;
@@ -47,6 +57,7 @@
   margin-right: auto;
   width: 100px;
   border: 1px solid;
+  transition: 0.5s ease;
 }
 
 .locked-text {
@@ -63,9 +74,19 @@
   left: 15px;
 }
 
+.input-group
+  > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+  margin-left: 20px !important;
+  width: 7rem;
+}
+
 /* On screens that are 992px or less */
 @media screen and (max-width: 992px) {
   .big-text {
+    font-size: 5rem;
+  }
+
+  .big-generate-text {
     font-size: 5rem;
   }
 }
@@ -75,6 +96,15 @@
   .big-text {
     font-size: 2rem;
     line-height: 4rem;
+  }
+
+  .big-generate-text {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+
+  .btn-large-bold {
+    font-size: 1.5rem !important;
   }
 
   .toast-alert {
@@ -90,5 +120,10 @@
     line-height: 1rem;
     top: 45px;
     width: 60px;
+  }
+
+  .input-group
+    > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+    width: auto;
   }
 }

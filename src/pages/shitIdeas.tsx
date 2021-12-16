@@ -19,6 +19,7 @@ const ShitIdeas = () => {
     word: "",
     locked: false,
   });
+  const [article, setArticle] = useState("A");
 
   const fetchRandomVerb = async () => {
     await fetch("http://localhost:8000/getRandomVerb")
@@ -38,6 +39,15 @@ const ShitIdeas = () => {
     await fetch("http://localhost:8000/getProduct")
       .then((res) =>
         res.json().then((r) => {
+          if (
+            r.product.charAt(0) === "N" ||
+            r.product.charAt(0) === "A" ||
+            r.product.charAt(0) === "E"
+          ) {
+            setArticle("AN");
+          } else {
+            setArticle("A");
+          }
           setProduct({ ...product, word: r.product });
         })
       )
@@ -65,7 +75,7 @@ const ShitIdeas = () => {
     <Container className="main-container d-flex flex-column justify-content-center">
       <Header />
       <Row className="big-text text-uppercase text-break d-inline-block statement-text">
-        A
+        {article}
         <WordState
           word={product.word}
           className="highlight-word"
@@ -100,12 +110,13 @@ const ShitIdeas = () => {
               locked: !noun.locked,
             })
           }
-        />{" "}
+        />
+        {". "}
       </Row>
       <Row>
         <Col>
           <Button
-            className="mt-4 btn-large-bold"
+            className="mt-4 btn-large-bold px-md-5"
             variant="outline-dark"
             size="lg"
             onClick={() => generateIdea()}
