@@ -83,6 +83,7 @@ const DumpIdeas = () => {
       {showToast && (
         <Toast
           show={showToast}
+          onClose={() => setShowToast(false)}
           className="position-absolute toast-alert"
           autohide
           delay={3000}
