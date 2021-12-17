@@ -81,7 +81,12 @@ const DumpIdeas = () => {
         </Col>
       </Row>
       {showToast && (
-        <Toast show={showToast} className="position-absolute toast-alert">
+        <Toast
+          show={showToast}
+          className="position-absolute toast-alert"
+          autohide
+          delay={3000}
+        >
           <Toast.Header>
             <strong className="me-auto">Alert</strong>
           </Toast.Header>
