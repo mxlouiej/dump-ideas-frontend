@@ -75,7 +75,7 @@ const ShitIdeas = () => {
     <Container className="main-container d-flex flex-column justify-content-center">
       <Header />
       <Row className="big-text text-uppercase text-break d-inline-block statement-text">
-        <div className="d-flex mb-4">
+        <div className="d-block d-md-flex mb-4">
           {article}
           <WordState
             setWord={(e) =>
@@ -95,8 +95,8 @@ const ShitIdeas = () => {
             }
           />{" "}
         </div>
-        THAT
         <div className="d-block d-lg-flex">
+          THAT
           <WordState
             setWord={(e) =>
               setVerb({
@@ -105,7 +105,7 @@ const ShitIdeas = () => {
               })
             }
             word={verb.word}
-            className="highlight-word"
+            className="highlight-word mt-4 mt-md-0"
             state={verb.locked}
             onClick={() =>
               setVerb({
@@ -114,6 +114,8 @@ const ShitIdeas = () => {
               })
             }
           />{" "}
+        </div>
+        <div className="d-block d-lg-flex mt-4">
           <WordState
             setWord={(e) =>
               setNoun({
