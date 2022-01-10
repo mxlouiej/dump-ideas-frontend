@@ -17,7 +17,7 @@ const WordState = ({ word, className, state, onClick, setWord }: Props) => {
 
       <FormControl
         className={`${className} statement-input`}
-        value={word ? word : "WORD"}
+        value={word ? word : ""}
         disabled={state}
         onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
           setWord(e.target.value)

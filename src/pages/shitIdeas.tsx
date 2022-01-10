@@ -129,7 +129,6 @@ const ShitIdeas = () => {
               })
             }
           />
-          {". "}
         </div>
       </Row>
       <Row>
