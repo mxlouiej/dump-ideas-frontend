@@ -74,9 +74,15 @@ const ShitIdeas = () => {
   return (
     <Container className="main-container d-flex flex-column justify-content-center">
       <Header />
-      <Row className="big-text text-uppercase text-break d-inline-block statement-text">
+      <Row className="big-text text-uppercase text-break d-inline-flex statement-text">
         {article}
         <WordState
+          setWord={(e) =>
+            setProduct({
+              ...product,
+              word: e,
+            })
+          }
           word={product.word}
           className="highlight-word"
           state={product.locked}
@@ -88,30 +94,43 @@ const ShitIdeas = () => {
           }
         />{" "}
         THAT
-        <br />
-        <WordState
-          word={verb.word}
-          className="highlight-word"
-          state={verb.locked}
-          onClick={() =>
-            setVerb({
-              ...verb,
-              locked: !verb.locked,
-            })
-          }
-        />{" "}
-        <WordState
-          word={noun.word}
-          className="highlight-word"
-          state={noun.locked}
-          onClick={() =>
-            setNoun({
-              ...noun,
-              locked: !noun.locked,
-            })
-          }
-        />
-        {". "}
+        <div className="d-block d-lg-flex">
+          <WordState
+            setWord={(e) =>
+              setVerb({
+                ...verb,
+                word: e,
+              })
+            }
+            word={verb.word}
+            className="highlight-word mt-4"
+            state={verb.locked}
+            onClick={() =>
+              setVerb({
+                ...verb,
+                locked: !verb.locked,
+              })
+            }
+          />{" "}
+          <WordState
+            setWord={(e) =>
+              setNoun({
+                ...noun,
+                word: e,
+              })
+            }
+            word={noun.word}
+            className="highlight-word mt-4"
+            state={noun.locked}
+            onClick={() =>
+              setNoun({
+                ...noun,
+                locked: !noun.locked,
+              })
+            }
+          />
+          {". "}
+        </div>
       </Row>
       <Row>
         <Col>
