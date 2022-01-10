@@ -4,7 +4,7 @@
 }
 
 .big-text {
-  font-size: 7rem;
+  font-size: 5rem;
   font-weight: 700;
   color: rgb(55, 55, 55);
 }
@@ -48,7 +48,7 @@
 
 .statement-input.form-control {
   padding: 0;
-  font-size: 7rem !important;
+  font-size: 5rem !important;
   font-weight: 700 !important;
   color: rgb(55, 55, 55);
   background-color: rgba(255, 255, 255, 0);
@@ -93,7 +93,7 @@
 @media screen and (max-width: 992px) {
   .statement-input.form-control,
   .big-text {
-    font-size: 5rem !important;
+    font-size: 3rem !important;
   }
 
   .big-generate-text {
@@ -105,7 +105,7 @@
 @media screen and (max-width: 600px) {
   .statement-input.form-control,
   .big-text {
-    font-size: 2rem !important;
+    font-size: 1.4rem !important;
     line-height: 2rem;
   }
 
