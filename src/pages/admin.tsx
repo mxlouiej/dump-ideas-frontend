@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
 
 import Header from "../components/header";
@@ -15,7 +15,14 @@ const Admin = () => {
     <Container className="main-container d-flex flex-column justify-content-center">
       <Header />
       {edit ? (
-        <Edit word={word} wordType={wordType} id={id} setEdit={setEdit} />
+        <Edit
+          word={word}
+          wordType={wordType}
+          id={id}
+          setWord={setWord}
+          setWordType={setWordType}
+          setEdit={setEdit}
+        />
       ) : (
         <Search
           word={word}
