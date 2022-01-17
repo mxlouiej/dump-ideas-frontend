@@ -22,8 +22,19 @@
   font-size: 2.5rem !important;
 }
 
+.btn-bold {
+  font-weight: 700 !important;
+  border-radius: 0 !important;
+}
+
 .dump-header {
   top: 2rem;
+  z-index: 1;
+}
+
+.fixed-top {
+  left: 50px !important;
+  text-align: start;
 }
 
 .form-control {
@@ -34,7 +45,7 @@
 }
 
 .bold-text {
-  font-weight: bold;
+  font-weight: 700 !important;
 }
 
 .highlight-word {
@@ -136,5 +147,9 @@
   .input-group
     > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
     width: auto;
+  }
+
+  .fixed-top {
+    left: 10px !important;
   }
 }
