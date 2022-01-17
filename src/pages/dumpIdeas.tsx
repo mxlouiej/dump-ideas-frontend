@@ -56,7 +56,7 @@ const DumpIdeas = () => {
             id="input-group-dropdown-2"
             align="end"
           >
-            {wordType === "Verb" ? (
+            {wordType === "verb" ? (
               <Dropdown.Item onClick={() => setWordType("noun")}>
                 Noun
               </Dropdown.Item>

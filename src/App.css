@@ -100,6 +100,10 @@
   width: 7rem;
 }
 
+.dropdown-toggle.btn.btn-outline-secondary {
+  text-transform: capitalize !important;
+}
+
 /* On screens that are 992px or less */
 @media screen and (max-width: 992px) {
   .statement-input.form-control,
