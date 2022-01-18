@@ -75,43 +75,65 @@ const ShitIdeas = () => {
     <Container className="main-container d-flex flex-column justify-content-center">
       <Header />
       <Row className="big-text text-uppercase text-break d-inline-block statement-text">
-        {article}
-        <WordState
-          word={product.word}
-          className="highlight-word"
-          state={product.locked}
-          onClick={() =>
-            setProduct({
-              ...product,
-              locked: !product.locked,
-            })
-          }
-        />{" "}
-        THAT
-        <br />
-        <WordState
-          word={verb.word}
-          className="highlight-word"
-          state={verb.locked}
-          onClick={() =>
-            setVerb({
-              ...verb,
-              locked: !verb.locked,
-            })
-          }
-        />{" "}
-        <WordState
-          word={noun.word}
-          className="highlight-word"
-          state={noun.locked}
-          onClick={() =>
-            setNoun({
-              ...noun,
-              locked: !noun.locked,
-            })
-          }
-        />
-        {". "}
+        <div className="d-block d-md-flex mb-4">
+          {article}
+          <WordState
+            setWord={(e) =>
+              setProduct({
+                ...product,
+                word: e,
+              })
+            }
+            word={product.word}
+            className="highlight-word"
+            state={product.locked}
+            onClick={() =>
+              setProduct({
+                ...product,
+                locked: !product.locked,
+              })
+            }
+          />{" "}
+        </div>
+        <div className="d-block d-lg-flex">
+          THAT
+          <WordState
+            setWord={(e) =>
+              setVerb({
+                ...verb,
+                word: e,
+              })
+            }
+            word={verb.word}
+            className="highlight-word mt-4 mt-md-0"
+            state={verb.locked}
+            onClick={() =>
+              setVerb({
+                ...verb,
+                locked: !verb.locked,
+              })
+            }
+          />{" "}
+        </div>
+        <div className="d-block d-lg-flex mt-4">
+          <WordState
+            setWord={(e) =>
+              setNoun({
+                ...noun,
+                word: e,
+              })
+            }
+            word={noun.word}
+            className="highlight-word"
+            state={noun.locked}
+            onClick={() =>
+              setNoun({
+                ...noun,
+                locked: !noun.locked,
+              })
+            }
+          />
+        </div>
       </Row>
       <Row>
         <Col>

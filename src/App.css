@@ -4,7 +4,7 @@
 }
 
 .big-text {
-  font-size: 7rem;
+  font-size: 5rem;
   font-weight: 700;
   color: rgb(55, 55, 55);
 }
@@ -22,8 +22,19 @@
   font-size: 2.5rem !important;
 }
 
+.btn-bold {
+  font-weight: 700 !important;
+  border-radius: 0 !important;
+}
+
 .dump-header {
   top: 2rem;
+  z-index: 1;
+}
+
+.fixed-top {
+  left: 50px !important;
+  text-align: start;
 }
 
 .form-control {
@@ -34,7 +45,7 @@
 }
 
 .bold-text {
-  font-weight: bold;
+  font-weight: 700 !important;
 }
 
 .highlight-word {
@@ -44,6 +55,15 @@
 
 .statement-text {
   padding-bottom: 2rem;
+}
+
+.statement-input.form-control {
+  padding: 0;
+  font-size: 5rem !important;
+  font-weight: 700 !important;
+  color: rgb(55, 55, 55);
+  background-color: rgba(255, 255, 255, 0);
+  border: 0px;
 }
 
 .sub-text {
@@ -80,10 +100,15 @@
   width: 7rem;
 }
 
+.dropdown-toggle.btn.btn-outline-secondary {
+  text-transform: capitalize !important;
+}
+
 /* On screens that are 992px or less */
 @media screen and (max-width: 992px) {
+  .statement-input.form-control,
   .big-text {
-    font-size: 5rem;
+    font-size: 3rem !important;
   }
 
   .big-generate-text {
@@ -93,9 +118,10 @@
 
 /* On screens that are 600px or less */
 @media screen and (max-width: 600px) {
+  .statement-input.form-control,
   .big-text {
-    font-size: 2rem;
-    line-height: 4rem;
+    font-size: 1.4rem !important;
+    line-height: 2rem;
   }
 
   .big-generate-text {
@@ -118,12 +144,16 @@
 
   .sub-text {
     line-height: 1rem;
-    top: 45px;
+    top: 30px;
     width: 60px;
   }
 
   .input-group
     > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
     width: auto;
+  }
+
+  .fixed-top {
+    left: 10px !important;
   }
 }

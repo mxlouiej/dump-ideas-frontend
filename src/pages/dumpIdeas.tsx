@@ -13,7 +13,7 @@ import Header from "../components/header";
 
 const DumpIdeas = () => {
   const [word, setWord] = useState("");
-  const [wordType, setWordType] = useState("Verb");
+  const [wordType, setWordType] = useState("verb");
   const [showToast, setShowToast] = useState(false);
   const [message, setMessage] = useState("");
 
@@ -56,12 +56,12 @@ const DumpIdeas = () => {
             id="input-group-dropdown-2"
             align="end"
           >
-            {wordType === "Verb" ? (
-              <Dropdown.Item onClick={() => setWordType("Noun")}>
+            {wordType === "verb" ? (
+              <Dropdown.Item onClick={() => setWordType("noun")}>
                 Noun
               </Dropdown.Item>
             ) : (
-              <Dropdown.Item onClick={() => setWordType("Verb")}>
+              <Dropdown.Item onClick={() => setWordType("verb")}>
                 Verb
               </Dropdown.Item>
             )}

@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainPage from "./pages/mainPage";
 import DumpIdeas from "./pages/dumpIdeas";
 import ShitIdeas from "./pages/shitIdeas";
+import Admin from "./pages/admin";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<MainPage />} />
         <Route path="dump" element={<DumpIdeas />} />
         <Route path="shit" element={<ShitIdeas />} />
+        <Route path="admin" element={<Admin />} />
       </Routes>
     </BrowserRouter>
   );
