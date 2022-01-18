@@ -35,6 +35,7 @@ const Edit = ({ id, word, wordType, setEdit, setWord, setWordType }: Props) => {
         res.json().then((r) => {
           setShowToast(true);
           setMessage("Edited successfully");
+          setTimeout(() => setEdit(false), 3000);
           console.log(r);
         });
       })
