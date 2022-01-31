@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 
-import Header from "../components/header";
 import Search from "./search";
 import Edit from "./edit";
 
@@ -13,7 +12,6 @@ const Admin = () => {
 
   return (
     <Container className="main-container d-flex flex-column justify-content-center">
-      <Header />
       {edit ? (
         <Edit
           word={word}

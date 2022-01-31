@@ -3,7 +3,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
-import Header from "../components/header";
+
 import WordState from "../components/wordState";
 
 const ShitIdeas = () => {
@@ -73,7 +73,6 @@ const ShitIdeas = () => {
   }, []);
   return (
     <Container className="main-container d-flex flex-column justify-content-center">
-      <Header />
       <Row className="big-text text-uppercase text-break d-inline-block statement-text">
         <div className="d-block d-md-flex mb-4">
           {article}

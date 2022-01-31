@@ -9,8 +9,6 @@ import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import Toast from "react-bootstrap/Toast";
 
-import Header from "../components/header";
-
 const DumpIdeas = () => {
   const [word, setWord] = useState("");
   const [wordType, setWordType] = useState("verb");
@@ -39,8 +37,6 @@ const DumpIdeas = () => {
 
   return (
     <Container className="main-container d-flex flex-column justify-content-center">
-      <Header />
-
       <Row className="my-5">
         <InputGroup className="mb-3">
           <FormControl

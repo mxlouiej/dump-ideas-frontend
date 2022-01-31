@@ -5,8 +5,6 @@ import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import { useNavigate } from "react-router";
 
-import Header from "../components/header";
-
 const MainPage = () => {
   const [data, setData] = useState(0);
   let navigate = useNavigate();
@@ -25,8 +23,6 @@ const MainPage = () => {
 
   return (
     <Container className="main-container d-flex flex-column justify-content-center">
-      <Header />
-
       <Row className="my-md-5">
         <h1 className="big-generate-text">
           I CAN GENERATE <br />

@@ -1,6 +1,6 @@
 .main-container {
   text-align: center;
-  height: 100vh;
+  height: 95vh;
 }
 
 .big-text {
@@ -28,13 +28,11 @@
 }
 
 .dump-header {
-  top: 2rem;
   z-index: 1;
 }
 
-.fixed-top {
-  left: 50px !important;
-  text-align: start;
+.dump-header > button {
+  width: 5rem;
 }
 
 .form-control {

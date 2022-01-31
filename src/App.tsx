@@ -7,16 +7,32 @@ import MainPage from "./pages/mainPage";
 import DumpIdeas from "./pages/dumpIdeas";
 import ShitIdeas from "./pages/shitIdeas";
 import Admin from "./pages/admin";
+import Login from "./pages/login";
+import Header from "./components/header";
+import AuthProvider from "./components/authProvider";
+import ProtectedRoute from "./components/protectedRoute";
 
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="dump" element={<DumpIdeas />} />
-        <Route path="shit" element={<ShitIdeas />} />
-        <Route path="admin" element={<Admin />} />
-      </Routes>
+      <AuthProvider>
+        <Header />
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="dump" element={<DumpIdeas />} />
+          <Route path="shit" element={<ShitIdeas />} />
+          <Route path="login" element={<Login />} />
+          {/* protected path */}
+          <Route
+            path="admin"
+            element={
+              <ProtectedRoute>
+                <Admin />
+              </ProtectedRoute>
+            }
+          />
+        </Routes>
+      </AuthProvider>
     </BrowserRouter>
   );
 }
