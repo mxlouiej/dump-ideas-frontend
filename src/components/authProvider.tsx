@@ -11,9 +11,7 @@ const AuthContext = React.createContext({} as Props);
 
 const AuthProvider = ({ children }: { children: JSX.Element[] }) => {
   let navigate = useNavigate();
-  const localUser = localStorage.getItem(
-    `${process.env.REACT_APP_SESSION_KEY}`
-  );
+  const localUser = localStorage.getItem("admin_authenticated");
 
   const authorizeLogin = async (e: React.KeyboardEvent, pass: string) => {
     if (e.key === "Enter") {
@@ -27,10 +25,7 @@ const AuthProvider = ({ children }: { children: JSX.Element[] }) => {
           res.json().then((r) => {
             if (r.success === true) {
               console.log("Authorized");
-              localStorage.setItem(
-                `${process.env.REACT_APP_SESSION_KEY}`,
-                r.token
-              );
+              localStorage.setItem("admin_authenticated", r.token);
               navigate("/admin");
             }
           });
