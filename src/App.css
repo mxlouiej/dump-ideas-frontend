@@ -154,4 +154,8 @@
   .fixed-top {
     left: 10px !important;
   }
+
+  .navbar-brand {
+    white-space: pre-wrap !important;
+  }
 }

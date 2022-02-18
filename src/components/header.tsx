@@ -12,7 +12,7 @@ const Header = () => {
       <Container>
         <Navbar.Brand>
           <Link to="/" className="text-decoration-none text-black">
-            <h2 className="bold-text">DUMP!</h2>
+            <h2 className="bold-text">RANDOM DIGITAL PRODUCTS</h2>
           </Link>
         </Navbar.Brand>
         <Navbar.Toggle />

@@ -40,7 +40,7 @@ const MainPage = () => {
               navigate(`/dump`);
             }}
           >
-            DUMP IDEAS
+            INPUT WORDS
           </Button>
           <h6 className="mt-2">HELP A COLLEAGUE</h6>
         </Col>
@@ -53,7 +53,7 @@ const MainPage = () => {
               navigate(`/shit`);
             }}
           >
-            SHIT IDEAS
+            GET IDEAS
           </Button>
           <h6 className="mt-2">HELP YOURSELF</h6>
         </Col>
