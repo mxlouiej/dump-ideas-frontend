@@ -37,7 +37,7 @@ const MainPage = () => {
             variant="outline-dark"
             size="lg"
             onClick={() => {
-              navigate(`/dump`);
+              navigate(`/inputWords`);
             }}
           >
             INPUT WORDS
@@ -50,7 +50,7 @@ const MainPage = () => {
             variant="outline-dark"
             size="lg"
             onClick={() => {
-              navigate(`/shit`);
+              navigate(`/getIdeas`);
             }}
           >
             GET IDEAS

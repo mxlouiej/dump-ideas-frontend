@@ -19,8 +19,8 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<MainPage />} />
-          <Route path="dump" element={<DumpIdeas />} />
-          <Route path="shit" element={<ShitIdeas />} />
+          <Route path="inputWords" element={<DumpIdeas />} />
+          <Route path="getIdeas" element={<ShitIdeas />} />
           <Route path="login" element={<Login />} />
           {/* protected path */}
           <Route
